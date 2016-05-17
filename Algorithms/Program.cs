@@ -17,7 +17,7 @@ namespace Algorithms
 
             t.QuickSort(array, 0, array.Length - 1);
 
-            PrintResults(array);
+            PrintResults(array); 
         }
         
         public static void PrintResults(int [] array)
