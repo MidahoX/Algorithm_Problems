@@ -1,0 +1,10 @@
+c:\users\hodan\documents\visual studio 2015\Projects\Algorithms\Algorithms\bin\Debug\Algorithms.exe.config
+c:\users\hodan\documents\visual studio 2015\Projects\Algorithms\Algorithms\bin\Debug\Algorithms.exe
+c:\users\hodan\documents\visual studio 2015\Projects\Algorithms\Algorithms\bin\Debug\Algorithms.pdb
+c:\users\hodan\documents\visual studio 2015\Projects\Algorithms\Algorithms\obj\Debug\Algorithms.exe
+c:\users\hodan\documents\visual studio 2015\Projects\Algorithms\Algorithms\obj\Debug\Algorithms.pdb
+C:\Users\hodan\Documents\Visual Studio 2015\Projects\Algorithms\EPI_Problems\Algorithms\bin\Debug\Algorithms.exe.config
+C:\Users\hodan\Documents\Visual Studio 2015\Projects\Algorithms\EPI_Problems\Algorithms\obj\Debug\Algorithms.exe
+C:\Users\hodan\Documents\Visual Studio 2015\Projects\Algorithms\EPI_Problems\Algorithms\obj\Debug\Algorithms.pdb
+C:\Users\hodan\Documents\Visual Studio 2015\Projects\Algorithms\EPI_Problems\Algorithms\bin\Debug\Algorithms.exe
+C:\Users\hodan\Documents\Visual Studio 2015\Projects\Algorithms\EPI_Problems\Algorithms\bin\Debug\Algorithms.pdb
