@@ -11,7 +11,7 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            ArrayProblems ap = new ArrayProblems(new int[] { 2, 1, 1, 3, 3, 2, 1 });
+            ArrayProblem ap = new ArrayProblem(new int[] { 2, 1, 1, 3, 3, 2, 1 });
             ap.DutchNationalFlagSort(3);
             PrintResults(ap.Array);
         }

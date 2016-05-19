@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Algorithms.Problems
 {
-    public class ArrayProblems
+    public class ArrayProblem
     {
         public int[] Array {
             get; set;
         }
 
-        public ArrayProblems(int[] array)
+        public ArrayProblem(int[] array)
         {
             // make a copy of parameter array
             Array = new int[array.Length];
