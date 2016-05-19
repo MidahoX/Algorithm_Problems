@@ -90,6 +90,7 @@ namespace Algorithms.Problems
             }
         }
 
+        // This partition only work when the pivot is pick from the rightest element.
         public int Partition(int[] a, int low, int high)
         {
             int pivot = a[high],
@@ -112,8 +113,31 @@ namespace Algorithms.Problems
         // Problem: Dutch National Flag Problem
         //          Write a program that takes an array A and an index i into A, and rearranges the elemtns such that all elements less than A[i] appear first
         //          followed by equal to pivot, followed by elements greater than pivot.
-        
+        // Solution: Do a loop from left to right, with each iteration check the vlaue at i+1. If it is smaller than pivot, swap that value with the i index value.
+        //           After this all the values smaller than pivot, will end up in front of it.
+        //           Do another similar loop from right to left. This will move bigger number to the right of the pivot
+        //           Complexity O(n).
+        public void DutchNationalFlagSort(int pivotIndex)
+        {
+            int pivotValue = Array[pivotIndex];
 
+            int smaller = 0;
+            for (int i = 0; i < Array.Length; i++)
+            {
+                if (Array[i] < pivotValue)
+                {
+                    Swap(Array, i, smaller++);                    
+                }
+            }
 
+            int larger = Array.Length - 1;
+            for (int i = Array.Length -1; i >= 0 && Array[i] >= pivotValue; i--)
+            {
+                if (Array[i] > pivotValue)
+                {
+                    Swap(Array, i, larger--);                    
+                }
+            }
+        }        
     }
 }

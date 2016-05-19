@@ -11,18 +11,14 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            int[] array = new int[5] { 2, 3, 1, 5, 4 };
-
-            ArrayProblems t = new ArrayProblems(array);
-
-            t.QuickSort(array, 0, array.Length - 1);
-
-            PrintResults(array); 
+            ArrayProblems ap = new ArrayProblems(new int[] { 2, 1, 1, 3, 3, 2, 1 });
+            ap.DutchNationalFlagSort(3);
+            PrintResults(ap.Array);
         }
         
         public static void PrintResults(int [] array)
         {
-            for(int i = 0; i < array.Length - 1; i++)
+            for(int i = 0; i < array.Length; i++)
             {
                 Console.Write(array[i] + " ");
             }

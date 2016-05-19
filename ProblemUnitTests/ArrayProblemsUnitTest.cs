@@ -43,5 +43,18 @@ namespace ProblemUnitTests
             InputArray.QuickSort(array, 0, array.Length - 1);
             CollectionAssert.AreEqual(array, new int[] { 1, 2, 3, 4, 5, 5, 7, 8, 9 });
         }
+
+        [TestMethod]
+        public void Test_DutchFlagProblemSort()
+        {
+            ArrayProblems ap = new ArrayProblems(new int[] { 5, 6, 1, 3, 8 });
+            ap.DutchNationalFlagSort(3);
+            CollectionAssert.AreEqual(ap.Array, new int[] { 1, 3, 6, 5, 8 });
+
+
+            ap = new ArrayProblems(new int[] { 2, 1, 1, 3, 3 });
+            ap.DutchNationalFlagSort(4);
+            CollectionAssert.AreEqual(ap.Array, new int[] { 1, 1, 2, 3, 3 });
+        }
     }
 }
