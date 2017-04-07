@@ -2,11 +2,10 @@ using System;
 
 // This is the text editor interface. 
 // Anything you type or change here will be seen by the other person in real time.
-class Solution{
+class SpiralMatrix{
     static void Main(){
         int n = 5;
         Point start = new Point(){row =2, col= 2};
-        
         PrintMatrix(n, start);
     }
     
