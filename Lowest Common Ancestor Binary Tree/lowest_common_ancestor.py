@@ -21,9 +21,12 @@ def find_lowest_common_ancestor(root, target1, target2):
     target1_path.reverse()
     target2_path.reverse()
 
-    for i,v in enumerate(target1_path):
-        if v != target2_path[i] and i - 1 >= 0:
-            return target1_path[i-1]
+    i = 0
+    while( i < len(target1_path) and i < len(target2_path)):
+        if target1_path[i] != target2_path[i]:
+            break
+        i+=1
+    return target1_path[i-1]
 
 def find_path(root, path, value):
     if root is None:
@@ -56,5 +59,5 @@ if __name__ == '__main__':
     node2.right = node5
     node3.left = node6
     node3.right = node7
-    lca = find_lowest_common_ancestor(node1, 3, 5)
+    lca = find_lowest_common_ancestor(node1, 2, 5)
     print(lca)
