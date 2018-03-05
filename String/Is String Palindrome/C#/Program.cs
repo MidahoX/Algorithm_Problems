@@ -36,12 +36,8 @@ namespace PalindromeChecker
          */
         static bool IsPalindrome(string input)
         {
-            // Edge case: input = ab
-            // If use i < input.Length - 1 / 2 -> the loop would not run
-            //      Setting i <= input.Length - 1 / 2 -> would allow the loop to run
-            //      However, this would cause abc, to have 1 iteration at b
-            //          To fix the out of range: add i < input.Length - 1 condition check before comparing i and ~i 
-            for(int i = 0; i <= (input.Length - 1) / 2; i++)
+            // Edge case: input = ab -> make sure iteration at i = 0 get run (terminate condition)
+            for(int i = 0; i < input.Length / 2; i++)
             {
                 if (i < input.Length -1 && input[i] != input[input.Length - 1 - i])
                 {
