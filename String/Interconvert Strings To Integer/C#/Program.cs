@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace InterconvertStringToInt
@@ -71,7 +72,7 @@ namespace InterconvertStringToInt
         // Use a while loop since we don't know the length of the digit string
         // As long as the number is not zero
         //      Get the remainder of division by 10
-        //      Put this number into StringBuilder at index 0 (since we are going from the back)
+        //      Put this number into StringBuilder at the end then reverse the string (Add to the beginning is expensive)
         //      Divide the current number by 10 and stop until the division result is 0
         // Time complexity is length(number)
         // Space complexity is length(number)
@@ -93,16 +94,17 @@ namespace InterconvertStringToInt
             while (number != 0)
             {
                 int remainder = number % 10;
-                sb.Insert(0, remainder);
+                // append to the beginning required shifting the string -> expensive
+                sb.Append(remainder);
                 number /= 10;
             }
 
+            string backwardString = string.Join("", sb.ToString().Reverse());
             if(isNegative)
             {
-                sb.Insert(0, '-');
+                return "-" + backwardString;
             }
-
-            return sb.ToString();
+            return backwardString;
         }
     }
 }
